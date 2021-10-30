@@ -17,7 +17,7 @@ const AddPlaces = () => {
     return (
         <div className="add-places">
             <form className="pb-5" onSubmit={handleSubmit(onSubmit)}>
-                <h2 className="pt-5"> Add a Places</h2>
+                <h2 className="pt-5"> Add a Place</h2>
                 <input {...register("name", { required: true })} placeholder="Name" />
 
                 <textarea {...register("Description")} placeholder="Description" />

@@ -12,7 +12,7 @@ const Services = () => {
         <div id="services" className="container">
 
             <h2 className="m-5 mt-5">World's Best Places to Visit</h2>
-            <div className="row row-cols-1 row-cols-md-1 text-lg-start g-5 m-5 ">
+            <div className="row row-cols-1 row-cols-md-1 text-lg-start g-5 mt-5 ">
 
                 {
                     services.map(service => <Service
