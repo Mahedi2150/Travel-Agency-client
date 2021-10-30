@@ -15,7 +15,7 @@ const Service = (props) => {
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{descrip} <span> <b> Read More...</b></span></p>
                         <p>Cost $ {price}</p>
-                        <Link to={`/places/${_id}`}><button className="btn-regular">Details</button></Link>
+                        <Link to={`/places/${_id}`}><button className="btn-info px-4 py-1 rounded-2 border-0 ">Details</button></Link>
                     </div>
                 </div>
             </div>
