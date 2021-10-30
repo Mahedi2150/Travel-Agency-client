@@ -9,31 +9,32 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="footer-col">
-                            <h4 className="h4-cls">company</h4>
+                            <h4 className="h4-cls">ABOUT</h4>
                             <ul>
                                 <li><Link to="#">about us</Link></li>
                                 <li><Link to="#">our services</Link></li>
                                 <li><Link to="#">privacy policy</Link></li>
-                                <li><Link to="#">Maternity</Link></li>
+                                <li><Link to="#">PRESS</Link></li>
+                                <li><Link to="#">WORK WITH US</Link></li>
                             </ul>
                         </div>
                         <div className="footer-col">
-                            <h4 className="h4-cls">get help</h4>
+                            <h4 className="h4-cls">TRAVEL TIPS</h4>
                             <ul>
-                                <li><Link to="#">FAQ</Link></li>
-                                <li><Link to="#">ECG/END</Link></li>
-                                <li><Link to="#">ICU</Link></li>
-                                <li><Link to="#">Rehabilitation</Link></li>
+                                <li><Link to="#">START HERE</Link></li>
+                                <li><Link to="#">BLOG</Link></li>
+                                <li><Link to="#">DESTINATION</Link></li>
+                                <li><Link to="#">TRAVEL INSURANCE</Link></li>
 
                             </ul>
                         </div>
                         <div className="footer-col">
-                            <h4 className="h4-cls">Live Care</h4>
+                            <h4 className="h4-cls">RESOURCES</h4>
                             <ul>
-                                <li><Link to="#">Prime Care</Link></li>
-                                <li><Link to="#">Laboratary</Link></li>
-                                <li><Link to="#">Imaging</Link></li>
-                                <li><Link to="#">Clinics</Link></li>
+                                <li><Link to="#">CATEGORIES</Link></li>
+                                <li><Link to="#">CITY GUIDES</Link></li>
+                                <li><Link to="#">TRAVEL RESOURCES</Link></li>
+
                             </ul>
                         </div>
                         <div className="footer-col">

@@ -59,7 +59,7 @@ const PlaceDetails = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{places?.name}</h5>
 
-                                            <p>Cost: {places?.price}</p>
+                                            <p>Cost: $ {places?.price}</p>
                                             <p className="card-text"> {places?.Description}</p>
                                             <Link to="/home"><button className="btn btn-primary">Back</button></Link>
                                         </div>
@@ -71,8 +71,10 @@ const PlaceDetails = () => {
                     </div>
                 </div>
                 <div className="col">
-                    <div className="p-1 border bg-light">
+                    <div className="">
 
+                        <img src="https://freepngimg.com/thumb/travel/30772-9-travel-transparent-image.png" width="250px" height="150px" alt="" />
+                        <h2 className="fw-bold text-success mb-5 border-bottom border-success">Please Book</h2>
 
                         <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
 
@@ -83,7 +85,7 @@ const PlaceDetails = () => {
                             <input defaultValue="" placeholder="Phone number" {...register("phone")} />
                             {errors.email && <span className="error">This field is required</span>}
 
-                            <input type="submit" />
+                            <input type="submit" className="btn-success btn-outline-none text-uppercase fw-bold" />
                         </form>
 
                     </div>

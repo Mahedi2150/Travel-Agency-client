@@ -16,8 +16,8 @@ const AddPlaces = () => {
     };
     return (
         <div className="add-places">
-            <h2>Please Add a Places</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="pb-5" onSubmit={handleSubmit(onSubmit)}>
+                <h2 className="pt-5"> Add a Places</h2>
                 <input {...register("name", { required: true })} placeholder="Name" />
 
                 <textarea {...register("Description")} placeholder="Description" />
@@ -25,7 +25,7 @@ const AddPlaces = () => {
                 <input type="number" {...register("price")} placeholder="Price" />
 
                 <input {...register("img")} placeholder="Img url" />
-                <input type="submit" />
+                <input type="submit" className="btn-success text-uppercase " />
             </form>
         </div>
     );
