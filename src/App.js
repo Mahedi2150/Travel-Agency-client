@@ -11,6 +11,8 @@ import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 
 import PlaceDetails from './Components/PlaceDetails/PlaceDetails';
 import AddPlaces from './Components/AddPlaces/AddPlaces';
+import Allorders from './Components/Allorders/Allorders';
+import Myorders from './Components/Myorders/Myorders';
 
 
 function App() {
@@ -34,6 +36,12 @@ function App() {
 
             <PrivateRoute path="/addplaces">
               <AddPlaces></AddPlaces>
+            </PrivateRoute>
+            <Route path="/allorders">
+              <Allorders></Allorders>
+            </Route>
+            <PrivateRoute path="/myorders">
+              <Myorders></Myorders>
             </PrivateRoute>
 
             <Route path="/login">
