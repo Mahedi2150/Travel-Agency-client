@@ -9,5 +9,7 @@ live Site link (https://travel-agency-73add.web.app//).
 <li>people can know about those beautiful places in details </li>
 
 <li>Everyone can booking there Preferred place   </li>
+
 <li>Anyone can add other place by create there own profile </li>
+
 <li>Admin can approve those order</li>

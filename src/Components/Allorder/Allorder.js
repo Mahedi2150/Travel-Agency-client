@@ -15,7 +15,7 @@ const Allorder = (props) => {
                             <td><button onClick={() => props.handelAcceptOrder(_id)} className="fw-bold bg-success ">Accept</button> / <button onClick={() => props.handelDeleteOrder(_id)} className="text-danger border-1" ><i class="fas fa-trash-alt"></i></button></td></>
                         :
                         <>
-                            <td className="text-warning fw-bold">{status}</td>
+                            <td className="text-success fw-bold">{status}</td>
                             <td><button onClick={() => props.handelDeleteOrder(_id)} className="text-danger border-1" ><i class="fas fa-trash-alt"></i></button></td>
                         </>
                 }
