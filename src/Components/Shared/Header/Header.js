@@ -19,11 +19,17 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav className="me-auto nav">
                             <Link className="navLink" to="/home">Home</Link>
-                            <Link className="navLink" to="/allorders">All Orders</Link>
-                            <Link className="navLink" to="/myorders">My Orders</Link>
+                            {user?.email &&
+                                <Link className="navLink" to="/allorders">All Orders</Link>
+                            }
+                            {user?.email &&
+                                <Link className="navLink" to="/myorders">My Orders</Link>
+                            }
 
 
-                            <Link className="navLink" to="/addplaces">Add Places</Link>
+                            {user.email &&
+                                <Link className="navLink" to="/addplaces">Add Places</Link>
+                            }
 
 
                         </Nav>
