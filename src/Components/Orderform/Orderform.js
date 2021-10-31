@@ -18,7 +18,7 @@ const Orderform = () => {
 
         //console.log(data);
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://fathomless-eyrie-64424.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added Succesfully")

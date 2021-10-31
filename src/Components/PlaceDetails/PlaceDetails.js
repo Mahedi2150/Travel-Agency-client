@@ -10,7 +10,7 @@ const PlaceDetails = () => {
     const { placeId } = useParams();
     const [places, setPlace] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/places/${placeId}`)
+        fetch(`https://fathomless-eyrie-64424.herokuapp.com/places/${placeId}`)
             .then(res => res.json())
             .then(data => setPlace(data))
     }, [])
@@ -25,7 +25,7 @@ const PlaceDetails = () => {
 
         console.log(data);
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fathomless-eyrie-64424.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
