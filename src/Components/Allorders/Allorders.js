@@ -10,7 +10,7 @@ const Allorders = () => {
             .then(res => res.json()
                 .then(data => setAllorders(data)))
 
-    }, [])
+    }, [allorders])
 
     const handelDeleteOrder = id => {
         console.log(id);
@@ -27,6 +27,23 @@ const Allorders = () => {
                         const remainingOrders = allorders.filter(order => order._id !== id);
                         setAllorders(remainingOrders);
                     }
+                });
+        }
+    }
+    const handelAcceptOrder = id => {
+        const proceed = window.confirm('Are you sure, you want to Accept order?');
+        if (proceed) {
+            const url = `http://localhost:5000/orders/${id}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert('Order Accepted');
+                    setAllorders(allorders);
                 });
         }
     }
@@ -49,6 +66,7 @@ const Allorders = () => {
                     <tbody>
                         {
                             allorders.map(allorders => <Allorder
+                                handelAcceptOrder={handelAcceptOrder}
                                 handelDeleteOrder={handelDeleteOrder}
                                 allorders={allorders} key={allorders._id}></Allorder>)
                         }

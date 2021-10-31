@@ -15,7 +15,7 @@ const Myorders = () => {
         fetch('https://fathomless-eyrie-64424.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setAllorders(data.filter(order => order?.mail == userEmail)))
-    }, [])
+    }, [allorders])
 
     const handelDeleteOrder = id => {
         console.log(id);
@@ -37,20 +37,19 @@ const Myorders = () => {
     }
 
     const handelAcceptOrder = id => {
-        console.log(id);
         const proceed = window.confirm('Are you sure, you want to Accept order?');
         if (proceed) {
-            const url = `https://fathomless-eyrie-64424.herokuapp.com/orders/${id}`;
+            const url = `http://localhost:5000/orders/${id}`;
             fetch(url, {
-                method: 'DELETE'
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
             })
                 .then(res => res.json())
                 .then(data => {
-                    if (data.deletedCount > 0) {
-                        alert('Deleted Successfully.');
-                        const remainingOrders = allorders.filter(order => order?._id !== id);
-                        setAllorders(remainingOrders);
-                    }
+                    alert('Order Accepted');
+                    setAllorders(allorders);
                 });
         }
     }

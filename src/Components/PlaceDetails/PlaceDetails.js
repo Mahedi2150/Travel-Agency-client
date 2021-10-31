@@ -16,32 +16,8 @@ const PlaceDetails = () => {
     }, [])
 
 
-    // for form 
 
 
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const { user } = useAuth()
-    const onSubmit = data => {
-
-        console.log(data);
-
-        fetch('https://fathomless-eyrie-64424.herokuapp.com/orders', {
-            method: "POST",
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data)
-
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result.insertedId) {
-                    alert("order processed seccessfully");
-
-                    reset()
-                }
-            })
-    }
 
     return (
 
