@@ -39,7 +39,7 @@ const Myorders = () => {
     const handelAcceptOrder = id => {
         const proceed = window.confirm('Are you sure, you want to Accept order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://fathomless-eyrie-64424.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
